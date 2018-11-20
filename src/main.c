@@ -54,8 +54,32 @@ int main(void)
     return 0;
 }
 
+// Exercice 56 question 4
+#include <stdio.h> 
 
+void inverse(int a[], int d) 
+{
+    int i = 0, tmp;
+    for(i=0 ; i < d/2 ; i++) 
+    {
+        tmp = a[i];
+        a[i] = a[d-i-1];
+        a[d-i-1] = tmp;
+    }
+}
 
+ int main(void) 
+ {
+     int i, a[5] = {1, 5, 9, 8, 11};
+     int b[5];
+     inverse(a, 5);
+     for(i=0 ; i < 5 ; i++)
+     {
+        b[i] = a[i];
+     }
+
+    return 0;
+}
 
 
 
