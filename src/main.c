@@ -37,7 +37,25 @@ void main(void)
      sat[i] = nb_aleatoire;
  }
 }
-	   
+
+// exercice 56 question 3
+int main(void)
+{
+    unsigned int dist[10] = {0,10,22,30,35,70,75,80,95,100};
+    unsigned char i;
+    
+    
+    for ( i = 0 ; i<10 ; i++ )
+          {
+              if ( dist[i] == 0 )
+               dist [i] = 0;
+               else dist [i] = dist [i] - dist [ i - 1];
+          }
+    return 0;
+}
+
+
+
 
 
 
