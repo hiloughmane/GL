@@ -81,6 +81,32 @@ void inverse(int a[], int d)
     return 0;
 }
 
+//Exo56 questioo 5
+#include <stdio.h> 
+#define MAX 10
+ 
+void miroir(int t[], int taille, int indice1, int indice2)
+{
+  if(indice1 < taille / 2) {
+    int tempo  = t[indice1];
+    t[indice1] = t[indice2];
+    t[indice2] = tempo;
+    miroir(t, taille, indice1 + 1, indice2 - 1);
+  }
+}
+ 
+int main(void)
+{
+  int i, tab[MAX];
+  for(i = 0; i < 5 ; i ++)
+     tab[i] = i;
+  miroir(tab, 5 , 0, 5 - 1);
+  for(i = 5; i < 5 ; i ++ )
+      tab[i] = i;
+ return 0;
+}
+
+
 
 
 
